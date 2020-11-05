@@ -1,0 +1,161 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+* {
+  margin:0px;
+  padding:0px;
+  box-sizing:border-box;
+  text-decoration:none;
+  
+}
+
+html,body {
+  font-family: 'Open Sans', sans-serif;
+
+}
+/* nav bar */
+i {
+  color:#808080
+}
+.grid {
+  height:23px;
+  float:right;
+  padding-right:-40px;
+}
+header{
+  margin:auto;
+  width:90%;
+}
+li{
+  list-style: none;
+}
+nav{
+  margin-top:10px;
+  display:flex;
+}
+.nav-links a {
+  list-style:none;
+  justify-content: space-around;
+  margin:30px 10px;
+  color:black;
+  opacity:75%;
+}
+.nav-links-left,.nav-links-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size:0.5em;
+}
+.nav-links-left{
+  justify-content: flex-start;
+  flex:1;
+}
+.nav-links-right{
+  justify-content:flex-end;
+  flex:;
+}
+.logo-container {
+  justify-content:flex-end;
+  flex:0.3;
+}
+.m-logo {
+  border-radius: 50%;
+  float:right;
+  padding:10px;
+}
+/*main logo and search bar*/
+
+#main-container {
+  min-height:100%;
+  margin-top:10em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25em;
+}
+#main-logo {
+  overflow:auto;
+  padding-bottom:100px;
+}
+.logo {
+  padding-left:150px;
+}
+.search-bar {
+text-align:center;
+width:25em;
+border-radius: 30px;
+border:1px solid #dcdcdc;
+}
+
+input {
+  width:90%;
+  height:45px;
+  border:none;
+  font-size:20px;
+  outline: none;
+}
+img.voice{
+ margin:-4px;
+}
+.voice {
+  height:25px;
+  position:relative;
+}
+
+.submit {
+  display:flex;
+  justify-content: center;
+  margin:1.5em ;
+  
+}
+button {
+  background-color:#f2f2f2;
+  margin:11px 4px;
+  padding: 0px 16px;
+  height:40px;
+  border:none;
+  border-radius:5px;
+  color:#5F6368;
+  cursor:pointer;
+}
+button:hover {
+  animation-name:background-color;
+  animation-duration: 500ms;
+  animation-fill-mode:forwards;
+  border:1px solid #c6c6c6;
+  color: rgb(32, 31, 31);
+  box-shadow: rgb(136, 134, 134)
+}
+@keyframes background-color {
+  100% {
+    background-color:#f7f7f7;
+  }
+}
+
+/*footer*/
+footer {
+  
+}
+
+#bottom-nav{
+  font-size: 13px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  background-color: rgb(243, 239, 239);;
+  margin-left: 0px;
+}
+
+.advertising , .business, .how-it-works{
+  float:left;
+  padding-left:10px;
+  padding-right:20px;
+  color:gray;
+}
+.privacy ,.terms, .settings{
+  float:right;
+  padding-right:20px;
+  color:gray;
+}
