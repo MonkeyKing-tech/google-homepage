@@ -4,64 +4,79 @@
   margin:0px;
   padding:0px;
   box-sizing:border-box;
-  text-decoration:none;
-  
 }
 
-html,body {
+body {
   font-family: 'Open Sans', sans-serif;
-
+  background:white;
+  color:#333;
+  line-height:1.5;
 }
-/* nav bar */
-i {
-  color:#808080
-}
-.grid {
-  height:23px;
-  float:right;
-  padding-right:-40px;
-}
-header{
-  margin:auto;
-  width:90%;
-}
-li{
+ul{
   list-style: none;
 }
-nav{
-  margin-top:10px;
-  display:flex;
+a {
+  color:#808080;
+  text-decoration:none;
 }
-.nav-links a {
-  list-style:none;
-  justify-content: space-around;
-  margin:30px 10px;
-  color:black;
-  opacity:75%;
+h1,h2 {
+  font-weight:700;
+  line-height:1.5;
 }
-.nav-links-left,.nav-links-right {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size:0.5em;
+/* nav bar */
+.navbar{
+  display:grid;
+  grid-template-columns: 50px 50px 1fr 50px 50px 50px 50px;
+  grid-template-rows:50px;
+  grid-template-areas:"about store . gmail image menu m-logo";
+  width:100%;
+  height:70px;
+  top:0px;
+  padding:10px 30px;
 }
-.nav-links-left{
-  justify-content: flex-start;
-  flex:1;
+#images{
+  grid-area: image;
 }
-.nav-links-right{
-  justify-content:flex-end;
-  flex:;
+#about{
+  grid-area: about;
 }
-.logo-container {
-  justify-content:flex-end;
-  flex:0.3;
+#store{
+  grid-area: store;
 }
-.m-logo {
+#gmail{
+  grid-area: gmail;
+}
+#m-logo{
+  grid-area: m-logo;
+}
+#menu{
+  grid-area: menu;
+}
+
+.navbar li {
+  font-size: 18px;
+  list-style-type: none;
+}
+
+.navbar a {
+  padding: 5px 10px;
+  margin:0 px;
+  font-size:15px;
+}
+ .navbar a:hover {
+  cursor: pointer;
+ }
+
+
+.grid {
+  height:23px;
+  padding-left:10px;
+} 
+.m-logo{
   border-radius: 50%;
-  float:right;
-  padding:10px;
-}
+} 
+
+
 /*main logo and search bar*/
 
 #main-container {
