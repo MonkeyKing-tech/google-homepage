@@ -77,22 +77,47 @@ h1,h2 {
 } 
 
 
+/* Just a heads up, I generally favor a class for styling for IDs.
+ * I would only use IDs when I am targetting like behavior.
+ * E.g: Scroll to element with ID target-scroll-item */
 /*main logo and search bar*/
 
 #main-container {
-  min-height:100%;
-  margin-top:10em;
+  min-height:100%; /* not sure what the purpose of this is */
+  margin-top:10em; /* Generally.. from what I know, 
+  usually you want to stick to using em or rem when laying things out over px.
+                    From what I understand about it, em and rem will scale properly. 
+                    So how it to looks on your computer will be how it looks on other peoples' screen sizes*/
   margin-left: auto;
   margin-right: auto;
-  width: 25em;
+  width: 25em; /* I think doing this looks funky. If anything, just center everything within the container so you
+                do not have to set a random width*/
 }
+
+.main-container-alternative {
+    margin-top: 10em;
+}
+
+/* currently this is not being used. This is targetting an ID but you made your div a class.
+ * If you did add this and it worked, it makes your page look really funny.*/
 #main-logo {
   overflow:auto;
   padding-bottom:100px;
 }
+
 .logo {
-  padding-left:150px;
+  padding-left:150px; /* I am not really a fan of doing stuff like this. 
+  Like what is your purpose of doing this? If you want to center things, there are better ways
+                       than using padding.*/
 }
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .search-bar {
 text-align:center;
 width:25em;
@@ -100,27 +125,49 @@ border-radius: 30px;
 border:1px solid #dcdcdc;
 }
 
-input {
+/* I generally do not really like to put styling directly on elements.
+ * I lean towards using class styling*/
+/* Reasoning is because not all input will use this and by adding this style to
+ * input element, it will make all input take this styling which may be an 
+ * unwanted side effect. */
+
+/* input {
+  width:90%;
+  height:45px;
+  border:none;
+  font-size:20px;
+  outline: none;
+} */
+
+.main-search-input {
   width:90%;
   height:45px;
   border:none;
   font-size:20px;
   outline: none;
 }
-img.voice{
+
+/* I would just add this margin styling into the class voice */
+/* img.voice{
  margin:-4px;
-}
+}*/
+
 .voice {
-  height:25px;
-  position:relative;
+    margin:-4px;
+    height:25px;
+    position:relative;
 }
 
-.submit {
+/* It is better to name things more clearly. */
+.submit-container {
   display:flex;
   justify-content: center;
   margin:1.5em ;
-  
 }
+
+/* again similar here. Not a fan of adding styling to all buttons unless that is your intention.
+ * Anything global usually leads to unwanted side effects.
+ * I rather make a class */
 button {
   background-color:#f2f2f2;
   margin:11px 4px;
@@ -131,6 +178,10 @@ button {
   color:#5F6368;
   cursor:pointer;
 }
+
+/* again similar here. Not a fan of adding styling to all buttons unless that is your intention.
+ * Anything global usually leads to unwanted side effects.
+ * I rather make a class */
 button:hover {
   animation-name:background-color;
   animation-duration: 500ms;
@@ -139,18 +190,22 @@ button:hover {
   color: rgb(32, 31, 31);
   box-shadow: rgb(136, 134, 134)
 }
+
+/* This is interesting. The thing for me though is that I do not even really notice this
+ * animation on or off. It is just too small, but regardless a cool concept. */
 @keyframes background-color {
   100% {
     background-color:#f7f7f7;
   }
 }
 
+/* unused class */
 /*footer*/
 footer {
   
 }
 
-#bottom-nav{
+.footer-container{
   font-size: 13px;
   position: fixed;
   width: 100%;
@@ -163,14 +218,43 @@ footer {
   margin-left: 0px;
 }
 
+/* I think this is redundant. If you were to use the same stylign on multiple things
+ * you can give it a more common class name.
+ * e.g: left-footer-button*/
 .advertising , .business, .how-it-works{
   float:left;
   padding-left:10px;
   padding-right:20px;
   color:gray;
 }
+
 .privacy ,.terms, .settings{
   float:right;
   padding-right:20px;
   color:gray;
+}
+
+.left-footer-nav-container {
+  float:left;
+}
+
+/* if you are going to target elements, it is better to do something liek this.
+ * So for classes with li as the direct children, apply this style. */
+.left-footer-nav-container > li {
+    display:inline;
+}
+
+.right-footer-nav-container {
+  float:right;
+}
+
+.right-footer-nav-container > li {
+    display:inline;
+}
+
+.footer-nav-link {
+    display:inline;
+    padding-left:10px;
+    padding-right:20px;
+    color:gray;
 }

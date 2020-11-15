@@ -23,18 +23,18 @@
     </div>
   </header>
 
-  <div id="main-container">
-    <div class="main-logo">
-      <img class="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+  <div class="main-container-alternative center-container">
+    <div class="center-container">
+      <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
         alt="google logo">
     </div>
     <div class="search-bar">
-      <input type="text" title="Search..">
+      <input type="text" title="Search.." class="main-search-input">
       <a href="#"> <img class="voice"
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png"
           title="Search by Voice"></a>
     </div>
-    <div class="submit">
+    <div class="submit-container">
       <label class="screen-reader-text" for="submit"></label>
       <button id= "google-search"type="submit" name="submit" class="searchButton">Google Search</button>
       <button id= "random-search-btn" type="submit" name="submit" class="searchButton2">I'm Feeling Lucky </button>
@@ -42,14 +42,18 @@
   </div>
 
   <footer>
-    <ul id="bottom-nav">
-      <li><a class="advertising" href="#">Advertising</a></li>
-      <li><a class="business" href="#">Business</a></li>
-      <li><a class="how-it-works" href="#">How Search works</a></li>
-      <li><a class="settings" href="#">Settings</a></li>
-      <li><a class="terms" href="#">Terms</a></li>
-      <li><a class="privacy" href="#">Privacy</a></li>
-    </ul>
+      <div class="footer-container">
+          <ul class="left-footer-nav-container">
+              <li><a class="footer-nav-link" href="#">Advertising</a></li>
+              <li><a class="footer-nav-link" href="#">Business</a></li>
+              <li><a class="footer-nav-link" href="#">How Search works</a></li>
+          </ul>
+          <ul class="right-footer-nav-container">
+              <li><a class="footer-nav-link" href="#">Settings</a></li>
+              <li><a class="footer-nav-link" href="#">Terms</a></li>
+              <li><a class="footer-nav-link" href="#">Privacy</a></li>
+          </ul>
+      </div>
   </footer>
 </body>
 
